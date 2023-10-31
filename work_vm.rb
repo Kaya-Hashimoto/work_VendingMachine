@@ -48,16 +48,16 @@ class VendingMachine
       puts "購入しますか？"
       puts "ハイは１を、イイエは２を押してください"
       choice = gets.chomp
-        while true
-          if choice == "1"
-            @salse += price*count
-            @back_money = @slot_money - @salse
-            @drink = current_count - count
-            return p "購入しました、お釣りです#{@back_money}円"
-          else
-            return p "お釣りを返却します#{@slot_money} 円"
-          end
+      while true
+        if choice == "1"
+          @salse += price*count
+          @back_money = @slot_money - @salse
+          @drink = current_count - count
+          return p "購入しました、お釣りです#{@back_money}円"
+        else
+          return p "お釣りを返却します#{@slot_money} 円"
         end
+      end
     end
   end
 end
